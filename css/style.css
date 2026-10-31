@@ -1,0 +1,459 @@
+
+/* =====================================
+   1. GLOBAL SETTINGS
+===================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f8f4ec;
+  color: #40352a;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* =====================================
+   2. HEADER AND NAVIGATION
+===================================== */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: #fffdf8;
+  border-bottom: 1px solid #e5d5b9;
+}
+
+.brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #98713d;
+}
+
+.brand span {
+  color: #b58b4b;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.site-header nav a {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.site-header nav a:hover {
+  color: #b58b4b;
+}
+
+
+/* =====================================
+   3. HOME HERO SECTION
+===================================== */
+
+.hero {
+  text-align: center;
+  padding: 75px 20px 85px;
+  background: linear-gradient(
+    180deg,
+    #fffdf8 0%,
+    #f8f4ec 100%
+  );
+}
+
+.hero-ornament {
+  font-family: "Amiri", serif;
+  font-size: 30px;
+  color: #a77c3f;
+  margin-bottom: 25px;
+}
+
+.eyebrow {
+  color: #a77c3f;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(48px, 8vw, 88px);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 15px 0;
+}
+
+.hero h1 i {
+  color: #b58b4b;
+  font-style: normal;
+}
+
+.hero-subtitle {
+  max-width: 550px;
+  margin: 15px auto;
+  color: #817565;
+  font-size: 13px;
+}
+
+.hero-photo {
+  width: min(320px, 85%);
+  height: 240px;
+  margin: 32px auto;
+  overflow: hidden;
+  border: 2px solid #c7a66f;
+  border-radius: 160px 160px 12px 12px;
+  background: #eee5d5;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.verse {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 23px;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.verse-ref {
+  color: #98866d;
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+
+
+/* =====================================
+   4. BUTTONS
+===================================== */
+
+.primary-button {
+  display: inline-block;
+  background: #a77c3f;
+  color: #ffffff;
+  border: 1px solid #a77c3f;
+  border-radius: 3px;
+  padding: 13px 24px;
+  margin: 12px 5px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  background: #76552d;
+  border-color: #76552d;
+  transform: translateY(-2px);
+}
+
+.text-link {
+  color: #a77c3f;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.text-link:hover {
+  color: #76552d;
+}
+
+
+/* =====================================
+   5. HOME CONTENT SECTIONS
+===================================== */
+
+.section {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(34px, 5vw, 48px);
+  font-weight: 500;
+  margin: 5px 0 15px;
+}
+
+.muted {
+  color: #817565;
+  font-size: 13px;
+}
+
+
+/* =====================================
+   6. EVENT CARDS
+===================================== */
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: 35px auto 0;
+  text-align: left;
+}
+
+.event-card {
+  overflow: hidden;
+  background: #fffdf8;
+  border: 1px solid #e5d5b9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(65, 45, 20, 0.09);
+}
+
+.event-card img {
+  width: 100%;
+  height: 240px;
+  display: block;
+  object-fit: cover;
+  background: #eee5d5;
+}
+
+.event-card-body {
+  padding: 24px;
+}
+
+.event-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 31px;
+  font-weight: 500;
+  margin: 4px 0;
+}
+
+.event-card-body p:not(.eyebrow) {
+  color: #817565;
+  font-size: 12px;
+  margin: 10px 0 15px;
+}
+
+
+/* =====================================
+   7. EVENT DETAILS PAGES
+===================================== */
+
+.event-page {
+  width: min(760px, 100%);
+  margin: auto;
+  padding: 55px 22px 75px;
+  text-align: center;
+}
+
+.event-page h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 7vw, 58px);
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.event-image {
+  display: block;
+  width: min(430px, 100%);
+  height: 270px;
+  margin: 28px auto;
+  object-fit: cover;
+  background: #eee5d5;
+  border: 1px solid #e5d5b9;
+}
+
+.event-description {
+  max-width: 570px;
+  margin: 20px auto;
+  color: #817565;
+  font-size: 13px;
+}
+
+
+/* =====================================
+   8. EVENT INFORMATION CARD
+===================================== */
+
+.details-card {
+  max-width: 550px;
+  margin: 30px auto;
+  padding: 32px 20px;
+  background: #fffdf8;
+  border: 1px solid #e5d5b9;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.details-card h2,
+.details-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 5px;
+}
+
+.details-card p:not(.eyebrow) {
+  color: #817565;
+  font-size: 13px;
+  margin: 10px;
+}
+
+.thin-line {
+  width: 180px;
+  height: 1px;
+  margin: 25px auto;
+  background: #e5d5b9;
+}
+
+
+/* =====================================
+   9. EVENT HIGHLIGHT
+===================================== */
+
+.event-highlight {
+  padding: 25px 15px;
+  border-top: 1px solid #e5d5b9;
+  border-bottom: 1px solid #e5d5b9;
+  color: #98713d;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.dress-code {
+  margin: 25px 5px;
+  color: #817565;
+  font-size: 13px;
+}
+
+
+/* =====================================
+   10. FOOTER
+===================================== */
+
+footer {
+  padding: 25px 15px;
+  background: #eee5d7;
+  color: #817565;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+/* =====================================
+   11. MUSIC BUTTON
+===================================== */
+
+.music-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  padding: 12px 18px;
+  border: 1px solid #c7a66f;
+  border-radius: 30px;
+  background: #fffdf8;
+  color: #98713d;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+.music-button:hover {
+  background: #f1e6d4;
+}
+
+
+/* =====================================
+   12. MOBILE RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 650px) {
+
+  .site-header {
+    padding: 14px 5%;
+  }
+
+  .brand {
+    font-size: 27px;
+  }
+
+  .site-header nav {
+    gap: 12px;
+  }
+
+  .site-header nav a {
+    font-size: 9px;
+  }
+
+  .hero {
+    padding: 50px 15px 65px;
+  }
+
+  .hero-ornament {
+    font-size: 24px;
+  }
+
+  .hero-photo {
+    height: 210px;
+    width: min(270px, 85%);
+  }
+
+  .section {
+    padding: 50px 6%;
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card img {
+    height: 220px;
+  }
+
+  .event-page {
+    padding: 40px 16px 60px;
+  }
+
+  .event-image {
+    height: 230px;
+  }
+
+  .details-card {
+    padding: 25px 12px;
+  }
+
+  .music-button {
+    right: 12px;
+    bottom: 12px;
+  }
+
+}
