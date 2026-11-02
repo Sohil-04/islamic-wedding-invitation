@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#650D30"><title>RSVP | Aisha &amp; Mayur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head>
+<body class="inner">
+<header class="site-header"><a class="brand" href="index.html"><span aria-hidden="true">♡</span> Aisha &amp; Mayur</a>
+<button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+<nav class="nav-links" id="navLinks" aria-label="Main"><a href="index.html">Home</a><a href="story.html">Our Story</a><a href="haldi.html">Haldi</a><a href="wedding.html">Wedding</a><a href="location.html">Location</a><a href="rsvp.html" aria-current="page">RSVP</a></nav>
+<button class="music-button" id="musicButton" aria-pressed="false">♫ <span>Play Music</span></button></header>
+<div class="flower-decor" aria-hidden="true"><img class="corner-rose rose-a" src="assets/flowers/rose-corner.png" alt=""><img class="corner-rose rose-b" src="assets/flowers/rose-corner.png" alt=""><div class="petal-field" id="petalField"></div></div>
+<main id="main"><section class="inner-page narrow"><p class="eyebrow">KINDLY REPLY</p><h1 class="script page-title">RSVP</h1>
+<form id="rsvpForm" class="rsvp-form" novalidate>
+<label>Your name<input id="gName" name="name" type="text" autocomplete="name" required><small class="err" id="eName"></small></label>
+<label>Number of guests<input id="gCount" name="count" type="number" min="1" max="20" value="1" required><small class="err" id="eCount"></small></label>
+<fieldset><legend>Will you attend?</legend><label class="radio"><input type="radio" name="att" value="Yes, I will attend" required> Yes, I will attend</label><label class="radio"><input type="radio" name="att" value="Sorry, I cannot attend"> Sorry, I cannot attend</label><small class="err" id="eAtt"></small></fieldset>
+<fieldset><legend>Events</legend><label class="radio"><input type="checkbox" name="ev" value="Haldi (21 Nov)" checked> Haldi, 21 Nov</label><label class="radio"><input type="checkbox" name="ev" value="Nikah & Wedding (22 Nov)" checked> Nikah &amp; Wedding, 22 Nov</label></fieldset>
+<label>Message (optional)<textarea id="gMsg" name="msg" rows="4"></textarea></label>
+<button class="gold-button" type="submit">Send RSVP on WhatsApp</button><p class="note">This opens WhatsApp with your reply already written.</p></form></section></main>
+<footer class="site-footer"><p class="script">Two hearts, one beautiful journey.</p><span class="gold-line"><i></i>♡<i></i></span><p>With love, Aisha &amp; Mayur</p></footer>
+<audio id="weddingAudio" loop preload="none"><source src="assets/music/wedding-song.mp3" type="audio/mpeg"></audio>
+<script src="js/script.js"></script><script src="js/countdown.js"></script><script src="js/flowers.js"></script>
+</body></html>
